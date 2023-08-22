@@ -1,0 +1,10 @@
+products = list()
+for _ in range(10):
+    q = input()
+    products.append(q)
+is_reverse = input()
+if is_reverse == "А-Я":
+    products.sort()
+else:
+    products.sort(reverse=True)
+print("\n".join(products))
