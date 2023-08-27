@@ -1,0 +1,22 @@
+# моё решение
+
+string = list(input().split())
+sorted_words = sorted(string, key=len)
+print(*sorted_words)
+
+
+
+# решение от преподавателей
+words = input().split()
+
+for i in range(len(words) - 1):
+    mini = i
+    for j in range(i + 1, len(words)):
+        if len(words[j]) < len(words[mini]):
+            mini = j
+            
+    tmp = words[mini]
+    words[mini] = words[i]
+    words[i] = tmp
+    
+print(*words)
