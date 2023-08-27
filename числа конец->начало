@@ -1,0 +1,13 @@
+# сравнение чисел по последней цифре в порядке убывания
+numbs = list(map(int, input().split()))
+
+for i in range(len(numbs) - 1):
+    for j in range(len(numbs) - i - 1):
+        if (numbs[j]) % 10 < (numbs[j+1]) % 10:
+
+            noviy = numbs[j]
+            numbs[j] = numbs[j+1]
+            numbs[j + 1] = noviy
+
+for qqq in numbs:
+    print(qqq)
