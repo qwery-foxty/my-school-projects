@@ -1,0 +1,5 @@
+# аналогичная, но про сыр
+
+string = list(input().split())
+sorted_words = sorted(string, reverse=True, key=len) # учусь писать несколько аргументов
+print(*sorted_words)
